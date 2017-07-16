@@ -1,7 +1,50 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-// test
+
+var dataStore = require("./dataStore")
+
+var properties = require("./dataStore").properties
+
+exports.mainStatus = "ok"
+global.aaa = "aaa"
+
+//console.log("main properties = ", properties)
+
+dataStore.properties = {aaa: "bb"}
+dataStore.print()
+
+
+setTimeout(function () {
+    dataStore.print()
+}, 1000);
+
+
+//dataStore.properties = {aaa: "aa"}
+//
+//console.log("main properties = ", properties)
+//console.log("dataStore.properties = ", dataStore.properties)
+//
+//dataStore.imageAdd()
+//
+//dataStore.print()
+//dataStore.irImage = []
+//dataStore.print()
+////dataStore.startLoop()
+//
+//
+//setTimeout(function () {
+//    dataStore.stopLoop()
+//    console.log(exports.mainStatus)
+//    dataStore.printAll()
+//}, 10000);
+
+//dataStore.properties = {aaa:"bb"}
+//dataStore.print()
+//dataStore.properties = {aaa:"cc"}
+//dataStore.print()
+
+
+
+dataStore.printAll()
+
+
+
 
